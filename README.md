@@ -39,6 +39,9 @@ A keras Tensorflow code using Mobilenetv2 to recognise Robotic or Human activiti
 5. to use tensorboard from another terminal run tensorboard --logdir="./path/to/mobile_activity/training/logs_gen" --port 7007
 6. in the browser go to http://localhost:7007/ to check the graphs
 
+##Testing:
+
+
 ## References:
 1. https://www.robotigniteacademy.com/en/course/deep-learning-with-domain-randomization/
 2. https://www.pyimagesearch.com/2019/07/15/video-classification-with-keras-and-deep-learning/
