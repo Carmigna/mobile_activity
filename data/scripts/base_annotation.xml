@@ -1,0 +1,12 @@
+<annotation>
+	<folder>dataset_gen_annotations</folder>
+	<filename></filename>
+	<source>data</source>
+	<size>
+		<depth>3</depth>
+	</size>
+        <name>Rest_Pose</name>
+        <label>0</label>
+	<segmented>0</segmented>
+	
+</annotation>
