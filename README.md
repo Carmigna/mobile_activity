@@ -18,4 +18,22 @@ A keras Tensorflow code using Mobilenetv2 to recognise Robotic or Human activiti
 4. we could choose for resolution (second argument) instead of 96 either 128, 160, 192, 224 or any add 32 but 96 is least demanding while training on a single laptop GPU or even worst on few laptop CPUs
 5. It is always recommended to install tensorflow GPU from source with CUDA [check this out!](https://github.com/Carmigna/tensorflow)
 
-##
+## Training:
+0. gedit ~/mobile_activity/training/scripts/train_model.py in line119 change the 5 in "x = Dense(5,activation='softmax', name='fc' )(x)" to the number of activity classes prepared in the database then save to the executable
+1. run python3 ~/mobile_activity/training/scripts/train_model.py  96 1.0 30 64 5 6 activity_model None 1 0.001 0.000001 None
+2. the executable arguments respectively are:
+   a- image resolution
+   b- mobilenetv2 parameter alpha
+   c- epochs
+   d- batch size
+   e- patience  (how many epochs to wait before reducing a fraction of the learning rate)
+   f- threads
+   g- name of the model
+   h- best weights file name (it is set to none because we're starting from scratch otherwise to start from a pretrained file, it should be saved in bk folder we created in mobile_activity/training repo after the last training session) 
+   i- number of elements to output (in this case we have only 1 since it's a classification algorithm)
+   j- initial learnin rate
+   k- final minimal learning rate
+   l- path to the training repo (it is defaulted with None)
+3. to use tensorboard from another terminal run tensorboard --logdir="./path/to/mobile_activity/training/logs_gen" --port 7007
+4. in the browser go to http://localhost:7007/ to check the graphs
+   
