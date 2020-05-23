@@ -20,21 +20,22 @@ A keras Tensorflow code using Mobilenetv2 to recognise Robotic or Human activiti
 6. It is always recommended to install tensorflow GPU from source with CUDA [check this out!](https://github.com/Carmigna/tensorflow)
 
 ## Training:
-0. gedit ~/mobile_activity/training/scripts/train_model.py in line119 change the 5 in "x = Dense(5,activation='softmax', name='fc' )(x)" to the number of activity classes prepared in the database (minimum 3) then save to the executable
-1. run python3 ~/mobile_activity/training/scripts/train_model.py  96 1.0 30 64 5 6 activity_model None 1 0.001 0.000001 None
-2. the executable arguments respectively are:
-   a- image resolution
-   b- mobilenetv2 parameter alpha
-   c- epochs
-   d- batch size
-   e- patience  (how many epochs to wait before reducing a fraction of the learning rate)
-   f- threads
-   g- name of the model
-   h- best weights file name (it is set to none because we're starting from scratch otherwise to start from a pretrained file, it should be saved in bk folder we created in mobile_activity/training repo after the last training session) 
-   i- number of elements to output (in this case we have only 1 since it's a classification algorithm)
-   j- initial learnin rate
-   k- final minimal learning rate
-   l- path to the training repo (it is defaulted with None)
-3. to use tensorboard from another terminal run tensorboard --logdir="./path/to/mobile_activity/training/logs_gen" --port 7007
-4. in the browser go to http://localhost:7007/ to check the graphs
+1. gedit ~/mobile_activity/training/scripts/train_model.py in line119 change the 5 in "x = Dense(5,activation='softmax', name='fc' )(x)" to the number of activity classes prepared in the database (minimum 3) then save to the executable
+2. cd ~/mobile_activity/training
+3. run python3 ~/mobile_activity/training/scripts/train_model.py  96 1.0 30 64 5 6 activity_model None 1 0.001 0.000001 None
+4. the executable arguments respectively are:
+   1. image resolution
+   2. mobilenetv2 parameter alpha
+   3. epochs
+   4. batch size
+   5. patience  (how many epochs to wait before reducing a fraction of the learning rate)
+   6. threads
+   7. name of the model
+   8. best weights file name (it is set to none because we're starting from scratch otherwise to start from a pretrained file, it should be saved in bk folder we created in mobile_activity/training repo after the last training session) 
+   9. number of elements to output (in this case we have only 1 since it's a classification algorithm)
+   10. initial learnin rate
+   11. final minimal learning rate
+   12. path to the training repo (it is defaulted with None)
+5. to use tensorboard from another terminal run tensorboard --logdir="./path/to/mobile_activity/training/logs_gen" --port 7007
+6. in the browser go to http://localhost:7007/ to check the graphs
    
