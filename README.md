@@ -14,9 +14,10 @@ A keras Tensorflow code using Mobilenetv2 to recognise Robotic or Human activiti
 ## Creating the Database:
 1. gedit ~/mobile_activity/training/scripts/generate_dataset.py
 2. add the number of your images in dataset_gen/images to "length" and save to the executable at line 93
-3. run python3 ~/mobile_activity/training/scripts/generate_dataset.py ~/mobile_activity/data/ 96 ~/mobile_activity/training/  
-4. we could choose for resolution (second argument) instead of 96 either 128, 160, 192, 224 or any add 32 but 96 is least demanding while training on a single laptop GPU or even worst on few laptop CPUs
-5. It is always recommended to install tensorflow GPU from source with CUDA [check this out!](https://github.com/Carmigna/tensorflow)
+3. cd ~/mobile_activity/training
+4. run python3 ~/mobile_activity/training/scripts/generate_dataset.py ~/mobile_activity/data/ 96 ~/mobile_activity/training/  
+5. we could choose for resolution (second argument) instead of 96 either 128, 160, 192, 224 or any add 32 but 96 is least demanding while training on a single laptop GPU or even worst on few laptop CPUs
+6. It is always recommended to install tensorflow GPU from source with CUDA [check this out!](https://github.com/Carmigna/tensorflow)
 
 ## Training:
 0. gedit ~/mobile_activity/training/scripts/train_model.py in line119 change the 5 in "x = Dense(5,activation='softmax', name='fc' )(x)" to the number of activity classes prepared in the database (minimum 3) then save to the executable
