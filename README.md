@@ -19,7 +19,7 @@ A keras Tensorflow code using Mobilenetv2 to recognise Robotic or Human activiti
 5. It is always recommended to install tensorflow GPU from source with CUDA [check this out!](https://github.com/Carmigna/tensorflow)
 
 ## Training:
-0. gedit ~/mobile_activity/training/scripts/train_model.py in line119 change the 5 in "x = Dense(5,activation='softmax', name='fc' )(x)" to the number of activity classes prepared in the database then save to the executable
+0. gedit ~/mobile_activity/training/scripts/train_model.py in line119 change the 5 in "x = Dense(5,activation='softmax', name='fc' )(x)" to the number of activity classes prepared in the database (minimum 3) then save to the executable
 1. run python3 ~/mobile_activity/training/scripts/train_model.py  96 1.0 30 64 5 6 activity_model None 1 0.001 0.000001 None
 2. the executable arguments respectively are:
    a- image resolution
