@@ -40,6 +40,7 @@ A keras Tensorflow code using Mobilenetv2 to recognise Robotic or Human activiti
 6. in the browser go to http://localhost:7007/ to check the graphs
 
 ## Testing:
+0. adjust the classes according to the labels in the executables predict_video.py and predict_cam.py
 1. from videos: run python3 predict_video.py --model model/activity.model --label-bin model/lb.pickle --input example_clips/activity.mp4 --output output/activity_128avg.avi --size 128
 2. from live feed camera: run python3 predict_cam.py --model model/activity.model --label-bin model/lb.pickle --size 128
 
