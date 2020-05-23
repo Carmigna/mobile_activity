@@ -44,7 +44,7 @@ class DataSequence(Sequence):
     def __init__(self, csv_file, batch_size=32, inmemory=False, number_of_elements_to_be_output=1):
         self._number_of_elements_to_be_output = number_of_elements_to_be_output
         
-        assert (self._number_of_elements_to_be_output == 1), "We only support 2 output model XY"
+        assert (self._number_of_elements_to_be_output == 1)
         
         self.paths = []
         self.batch_size = batch_size
