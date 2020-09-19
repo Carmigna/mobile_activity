@@ -33,7 +33,7 @@ A keras Tensorflow code using Mobilenetv2 to recognise Robotic or Human activiti
    7. name of the model
    8. best weights file name (it is set to none because we're starting from scratch otherwise to start from a pretrained file, it should be saved in bk folder we created in mobile_activity/training repo after the last training session) 
    9. number of elements to output (in this case we have only 1 since it's a classification algorithm)
-   10. initial learnin rate
+   10. initial learning rate
    11. final minimal learning rate
    12. path to the training repo (it is defaulted with None)
 5. to use tensorboard from another terminal run tensorboard --logdir="./path/to/mobile_activity/training/logs_gen" --port 7007
